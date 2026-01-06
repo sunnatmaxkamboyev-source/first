@@ -1,0 +1,68 @@
+/* ----------------------------- */
+/* GLOBAL STYLES FOR ALL PAGES */
+/* ----------------------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background 0.5s ease;
+  animation: bgShift 15s ease-in-out infinite alternate;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+  padding: 0;
+}
+
+.ant-card {
+  border-radius: 16px !important;
+  background: rgba(255,255,255,0.05) !important;
+  color: white !important;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.35);
+}
+
+.ant-btn {
+  border-radius: 6px !important;
+  font-weight: bold;
+}
+
+input, .ant-input, .ant-input-number {
+  border-radius: 6px;
+  text-align: center;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.search-bar {
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.cart-total {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #00ffcc;
+}
+
+@keyframes bgShift {
+  0% { background: linear-gradient(135deg, #1e3c72, #2a5298); }
+  50% { background: linear-gradient(135deg, #2a5298, #1e3c72); }
+  100% { background: linear-gradient(135deg, #1e3c72, #2a5298); }
+}
